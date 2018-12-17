@@ -8,24 +8,37 @@
 
 import Foundation
 
+/*
+ * Struct to define a question.
+ */
 struct Question {
     var question: String
     var type: ResponseType
     var answers: [Answer]
 }
 
+/*
+ * Set ResponseType to be one of the following cases.
+ */
 enum ResponseType {
     case single, multiple, ranged
 }
 
+/*
+ * Struct to define an answer.
+ */
 struct Answer {
     var text: String
     var animal: AnimalType
 }
 
+/*
+ * Set AnimalType to be ons of the following cases.
+ */
 enum AnimalType: Character{
     case dog = "🐶", cat = "🐱", turtle = "🐢", rabbit = "🐰"
     
+    // Create definition text for each animal type.
     var definition: String {
         switch self {
             case .dog:

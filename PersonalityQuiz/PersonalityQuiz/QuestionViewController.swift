@@ -10,9 +10,13 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     
+    // Initiliaze variable to store which is the current question.
     var questionIndex: Int = 0
+    
+    // Initiliaze variable to store chosen answers.
     var answersChosen: [Answer] = []
 
+    // Initialize all outlets.
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var singleStackView: UIStackView!
@@ -38,7 +42,7 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet weak var progressBar: UIProgressView!
     
-    
+    // Initliaze an array with multiple questions.
     var questions: [Question] = [
         Question(question: "Which food do you like the most?", type:.single,
                  answers: [
@@ -63,11 +67,15 @@ class QuestionViewController: UIViewController {
                 ])
     ]
     
+    // When the view did load, update the user interface.
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
     
+    /* When a single answer button is pressed, append the answer
+     * to the array of chosen answers and go to the next question.
+     */
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         let currentAnswers = questions[questionIndex].answers
 
@@ -87,6 +95,9 @@ class QuestionViewController: UIViewController {
         nextQuestion()
     }
     
+    /* When multiple answers are pressed, append those answers to
+     * to the array of chosen answers and go to the next question.
+     */
     @IBAction func multipleAnswerButtonPressed(_ sender: Any) {
         let currentAnswers = questions[questionIndex].answers
 
@@ -106,6 +117,9 @@ class QuestionViewController: UIViewController {
         nextQuestion()
     }
     
+    /* When a range is set, append the answer corresponding to that
+     * range indicator to the array of chosen answers and go to next question.
+     */
     @IBAction func rangedAnswerButtonPressed(_ sender: Any) {
         let currentAnswers = questions[questionIndex].answers
         let index = Int(round(rangedSlider.value *
@@ -116,6 +130,9 @@ class QuestionViewController: UIViewController {
         nextQuestion()
     }
     
+    /* Go the the next question of the questions array if there is,
+     * otherwise go to the result view.
+     */
     func nextQuestion() {
         questionIndex += 1
         
@@ -126,6 +143,10 @@ class QuestionViewController: UIViewController {
         }
     }
     
+    /* Check which type of question is the current, and install
+     * the view that corresponds to that type.
+     * Then, load the guestion in the outlets of the view.
+     */
     func updateUI() {
         singleStackView.isHidden = true
         multipleStackView.isHidden = true
@@ -149,6 +170,7 @@ class QuestionViewController: UIViewController {
         }
     }
     
+    // Set all button titles with question answers.
     func updateSingleStack(using answers: [Answer]) {
         singleStackView.isHidden = false
         singleButton1.setTitle(answers[0].text, for: .normal)
@@ -157,6 +179,7 @@ class QuestionViewController: UIViewController {
         singleButton4.setTitle(answers[3].text, for: .normal)
     }
     
+    // Set all switches to off, and all labels to question answers.
     func updateMultipleStack(using answers: [Answer]) {
         multipleStackView.isHidden = false
         multiSwitch1.isOn = false
@@ -169,6 +192,7 @@ class QuestionViewController: UIViewController {
         multiLabel4.text = answers[3].text
     }
     
+    // Set all range markers to question answers, and set the value to 0.5.
     func updateRangedStack(using answers: [Answer]) {
         rangedStackView.isHidden = false
         rangedSlider.setValue(0.5, animated: false)
@@ -176,6 +200,7 @@ class QuestionViewController: UIViewController {
         rangedLabel2.text = answers.last?.text
     }
     
+    // Give the array with chosen answers to the result view.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ResultsSegue" {
             let resultsViewController = segue.destination as! ResultsViewController

@@ -10,17 +10,24 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    // Initliaze array for chosen answers.
     var responses: [Answer]!
     
+    // Create all outlets.
     @IBOutlet weak var resultDefinitionLabel: UILabel!
     @IBOutlet weak var resultAnswerLabel: UILabel!
     
+    // When the view did load, calculate result for the quiz.
     override func viewDidLoad() {
         navigationItem.hidesBackButton = true
         super.viewDidLoad()
         calculatePersonalityResult()
     }
     
+    /* Determine the animals that corresponds to the chosen answers.
+     * The animal that occurres the most, is the result.
+     * Set the labels in the view with a result text.
+     */
     func calculatePersonalityResult() {
         var frequencyOfAnswers: [AnimalType: Int] = [:]
         let responseTypes = responses.map { $0.animal }

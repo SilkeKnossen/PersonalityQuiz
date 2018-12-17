@@ -10,15 +10,13 @@ import UIKit
 
 class IntroductionViewController: UIViewController {
 
+    // Load view.
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    // Make unwinding to this View Controller possible.
     @IBAction func unwindToQuizIntroduction(segue:
-    UIStoryboardSegue) {
-      
-    }
-
-
+    UIStoryboardSegue) {}
 }
 

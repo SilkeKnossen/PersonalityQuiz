@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -157,7 +157,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjK-Bn-BcP">
-                                <rect key="frame" x="0.0" y="84" width="375" height="38.5"/>
+                                <rect key="frame" x="16" y="84" width="343" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -171,7 +171,7 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RIa-TN-Inh">
                                         <rect key="frame" x="-2" y="0.0" width="349" height="31"/>
                                     </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="192" translatesAutoresizingMaskIntoConstraints="NO" id="6Uu-RC-Ed5">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="6Uu-RC-Ed5">
                                         <rect key="frame" x="0.0" y="50" width="345" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA4-hn-Qbh">
@@ -239,10 +239,10 @@
                             <constraint firstItem="YAQ-nP-uzP" firstAttribute="centerX" secondItem="bnb-jh-iO8" secondAttribute="centerX" id="HJZ-75-Yw0"/>
                             <constraint firstItem="mKM-sd-X62" firstAttribute="centerX" secondItem="bnb-jh-iO8" secondAttribute="centerX" id="J25-5e-8ZV"/>
                             <constraint firstItem="Crt-Wc-yL0" firstAttribute="leading" secondItem="OG7-E0-ghk" secondAttribute="leading" constant="10" id="LuF-gD-InS"/>
-                            <constraint firstItem="RjK-Bn-BcP" firstAttribute="leading" secondItem="OG7-E0-ghk" secondAttribute="leading" id="PBW-1g-mVJ"/>
+                            <constraint firstItem="RjK-Bn-BcP" firstAttribute="leading" secondItem="bnb-jh-iO8" secondAttribute="leadingMargin" id="PBW-1g-mVJ"/>
                             <constraint firstItem="YAQ-nP-uzP" firstAttribute="leading" secondItem="OG7-E0-ghk" secondAttribute="leading" constant="15" id="RVW-L5-YbU"/>
                             <constraint firstItem="mKM-sd-X62" firstAttribute="centerY" secondItem="bnb-jh-iO8" secondAttribute="centerY" id="UWE-q6-36C"/>
-                            <constraint firstItem="OG7-E0-ghk" firstAttribute="trailing" secondItem="RjK-Bn-BcP" secondAttribute="trailing" id="Wox-Bv-675"/>
+                            <constraint firstItem="RjK-Bn-BcP" firstAttribute="trailing" secondItem="bnb-jh-iO8" secondAttribute="trailingMargin" id="Wox-Bv-675"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zAb-v5-LLa" secondAttribute="trailing" id="XmA-sb-zOW"/>
                             <constraint firstItem="Crt-Wc-yL0" firstAttribute="centerY" secondItem="bnb-jh-iO8" secondAttribute="centerY" id="Y7b-dT-CgM"/>
                             <constraint firstItem="zAb-v5-LLa" firstAttribute="leading" secondItem="bnb-jh-iO8" secondAttribute="leadingMargin" id="acq-Op-Pby"/>
